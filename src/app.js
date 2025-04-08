@@ -10,9 +10,21 @@ window.onload = function() {
   console.log("Hello Rigo from the console!");
 
 
-  let suits = [ "♦", "♥", "♠", "♣"]
+  let suits = [ "♦", "♥", "♠", "♣"];
 
-  document.querySelector("#root").innerHTML
+  let positionSuits = suits[Math.floor(Math.random()*4)]
+
+  let numerosRandom = []
+
+  console.log(positionSuits)
+
+
+  let header = document.querySelector(".header");
+
+  header.innerHTML= positionSuits
+
+  console.log(header)
+
 
 
 };
