@@ -29,26 +29,19 @@ window.onload = function () {
   let footer = document.querySelector(".footer")
   footer.innerHTML = positionSuits
 
-  const CambioColor = [header, numero, footer];
 
-  // Comprobamos si la pinta es Corazón (♥) o Diamante (♦)
-  if (positionSuits === "♥" || positionSuits === "♦") {
-    // Si es roja, añadimos la clase 'text-danger' (rojo de Bootstrap)
-    // y nos aseguramos de quitar 'text-dark' si estaba antes.
-    console.log("Pinta roja detectada:", positionSuits);
-    CambioColor.forEach(element => {
-      element.classList.remove("text-dark"); // Quita negro
-      element.classList.add("text-danger");  // Añade rojo
-    });
+
+  const cambioColor = [header, numero, footer]
+
+  if (positionSuits == "♦" || positionSuits == "♥") {
+    cambioColor.forEach(element => {
+      element.classList.add("text-danger");
+      element.classList.remove("text-dark")
+    })
   } else {
-    // Si no es roja (es Pica ♠ o Trébol ♣), añadimos 'text-dark' (negro de Bootstrap)
-    // y nos aseguramos de quitar 'text-danger' si estaba antes.
-    console.log("Pinta negra detectada:", positionSuits);
-    CambioColor.forEach(element => {
-      element.classList.remove("text-danger"); // Quita rojo
-      element.classList.add("text-dark");     // Añade negro
-    });
+    cambioColor.forEach(element => {
+      element.classList.add("text-dark");
+      element.classList.remove("text-danger")
+    })
   }
-
-
 }
