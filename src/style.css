@@ -7,3 +7,6 @@ body{
     width: 300px;
     height: 400px;
 }
+.footer{
+    transform: rotate(180deg);
+}
